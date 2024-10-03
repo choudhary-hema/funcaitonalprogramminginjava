@@ -1,0 +1,18 @@
+.stream
+.filter
+.map
+.foreach
+.reduce
+.distinct
+ number.stream().distinct().forEach(System.out::println)
+.sorted
+ number.stream().sorted().forEach(System.out::println)
+
+Comparator
+number.stream().sorted(Comparator.naturalOrder()).forEach(System.out::println)
+number.stream().sorted(Comparator.reverseOrder()).forEach(System.out::println)
+custom : 
+ courses.stream().sorted(Comparator.comparing(a -> a.length())).forEach(System.out::println)
+collector
+
+jshell
