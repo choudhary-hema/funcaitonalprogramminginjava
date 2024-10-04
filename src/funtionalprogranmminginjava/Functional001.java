@@ -8,21 +8,29 @@ public class Functional001 {
 	public static void main(String arg[]) {
 		System.out.println("Print all numbers : ");
 		printAllNumbers(List.of(9,35,8,1,6,98,2,4,56,23));
+		System.out.println("========================================================================");
 		System.out.println("Print only even numbers : ");
 		printEvenNumbers(List.of(9,35,8,1,6,98,2,4,56,23));
+		System.out.println("========================================================================");
 		System.out.println("Print only odd numbers : ");
 		printOddNumbers(List.of(9,35,8,1,6,98,2,4,56,23));
+		System.out.println("========================================================================");
 		List<String> courses = Arrays.asList("Spring Data", "AWS", "Spring Security", "GCP", "Python");
 		System.out.println("Print All string from list : ");
 		printStringFromList(courses);
+		System.out.println("========================================================================");
 		System.out.println("Print All Spring courses from list : ");
 		printSpringCoursesFromList(courses);
+		System.out.println("========================================================================");
 		System.out.println("Print All courses with 4 or more character : ");
 		printCoursesWith4OrMoreChar(courses);
+		System.out.println("========================================================================");
 		System.out.println("Print sqaure of even numbers : ");
 		printSquareOfEvenNumbers(List.of(9,35,8,1,6,98,2,4,56,23));
+		System.out.println("========================================================================");
 		System.out.println("Print cube of odd numbers : ");
 		printCubeOfOddNumbers(List.of(9,35,8,1,6,98,2,4,56,23));
+		System.out.println("========================================================================");
 		System.out.println("Print number of characters in the course : ");
 		printNoOfCharactersInCourse(courses);
 	}

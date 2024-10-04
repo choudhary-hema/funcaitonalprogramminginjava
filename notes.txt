@@ -1,3 +1,7 @@
+jshell
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 .stream
 .filter
 .map
@@ -15,4 +19,34 @@ custom :
  courses.stream().sorted(Comparator.comparing(a -> a.length())).forEach(System.out::println)
 collector
 
-jshell
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Predicate < predicate (boolean-valued function) of one argument >
+ - filter
+Function < accepts one argument and produces a result >
+ - map
+Consumer < operation that accepts a single input argument and returns no result >
+ - forEach
+ 
+ 
+ - is functional interface
+ - has only one abstract method - this is function descriptor
+ - other will be default or static
+ 
+BinaryOperator : accept 2 input of same type and return single output of same type
+ - reduce
+ 
+
+UnaryOperator : accept 1 input of same type and return single output of same type
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Behavior of parameterization
+- passing algorithm, strategy as a parameter
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Supplier 
+- no  input - return something
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+BiFunction
+BiPredicate
+BiConsumer
+
