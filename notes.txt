@@ -1,3 +1,22 @@
+1. What is a functional interface in Java, and how is it different from a regular interface?
+
+A functional interface in Java is an interface that contains only one abstract method,
+ but it can have any number of default or static methods. 
+ The key characteristic is that it’s intended to represent a single functionality 
+ and can be used with lambda expressions. 
+In contrast, a regular interface can have multiple abstract methods, and prior to Java 8, 
+all methods in an interface were abstract by default (except default and static methods introduced later).
+
+Some examples of built-in functional interfaces in Java are:
+
+Runnable
+Supplier<T>
+Consumer<T>
+Function<T, R>
+Predicate<T>
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 jshell
 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -49,4 +68,63 @@ Supplier
 BiFunction
 BiPredicate
 BiConsumer
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+MethodRefrences
+- static method
+- non static method
+- constructor
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+allmatch
+anymatch
+nonmatch
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Comparator
+sorted
+comparing
+thenComparing
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+limit() - if i want top 5 
+skip() - skip top 3
+keep 3 take next 5 - use in combo
+takewhile() - return all elements until any element doesn't meet the criteria
+dropwhile() - return all elements after any element meets the criteria
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+max
+min >> optional
+findFirst
+findAny
+sum >> can return
+average ?? can return OptionalDouble
+count
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Collectors.groupby
+Collectors.counting
+Collectors..maxBy
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+jshell> Arrays.stream(numberArray);
+$6 ==> java.util.stream.IntPipeline$Head@2328c243
+
+jshell> List<Integer> number = List.of(1,7,3,9,1,3,0,12,65,24);;
+number ==> [1, 7, 3, 9, 1, 3, 0, 12, 65, 24]
+
+jshell> number.stream()
+$9 ==> java.util.stream.ReferencePipeline$Head@45283ce2
+
+jshell> Stream.of(1, 7, 3, 9, 1, 3, 0, 12, 65, 24);
+$10 ==> java.util.stream.ReferencePipeline$Head@7591083d
+
+jshell> int[] numberArray = {1,3,51,12,876,23,53};
+numberArray ==> int[7] { 1, 3, 51, 12, 876, 23, 53 }
+
+jshell> Arrays.stream(numberArray);
+$12 ==> java.util.stream.IntPipeline$Head@736e9adb
+
+jshell> Arrays.stream(numberArray).sum();
+$13 ==> 1019
+
+jshell> Arrays.stream(numberArray).min();
+$14 ==> OptionalInt[1]
+
+jshell> Arrays.stream(numberArray).max();
+$15 ==> OptionalInt[876]
 
