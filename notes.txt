@@ -101,6 +101,20 @@ Collectors.groupby
 Collectors.counting
 Collectors..maxBy
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Flatmap
+Higher Order function - return method from a method
+pee
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Easy to write performance code
+we can parallelize program here easily
+
+java execute the entire code until its terminal operation else its lazy (intermediate operation)
+ - this improves performance
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+parallel
+we dont do parallel in structure cause in structure we have lot of state there, like variable which keeps on changing
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 jshell> Arrays.stream(numberArray);
 $6 ==> java.util.stream.IntPipeline$Head@2328c243
 
